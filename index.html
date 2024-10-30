@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan's Global Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav class="side-menu">
+            <h2>Main Menu</h2>
+            <ul>
+<!--                 <li class="menu-item">
+                    <a href="#" class="menu-link" onclick="toggleMenu('test1')">Test 1</a>
+                    <ul id="test1" class="submenu">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                        <li><a href="#">Option 3</a></li>
+                    </ul>
+                </li> -->
+            <li class="menu-item">
+                <a href="#" class="menu-link" onclick="toggleMenu('dataCentres')">Providers</a>
+                <ul id="dataCentres" class="submenu">
+                    <li><a href="#" onclick="toggleAWSDataCentres()">Amazon AWS</a></li>
+                    <li><a href="#" onclick="toggleAzureDataCentres()">Microsoft Azure</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="https://twitter.com/ha3ks" target="_blank" class="menu-link"><i class="fab fa-twitter"></i>Follow me on Twitter</a>
+                <ul id="twitter" class="submenu">
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="https://ha3ks.github.io" target="_blank" class="menu-link"><i class="fas fa-rss"></i>Blog</a>
+                <ul id="blog" class="submenu">
+                </ul>
+            </li>
+        </ul>
+	</nav>
+
+    <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        function toggleMenu(id) {
+            var submenu = document.getElementById(id);
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
